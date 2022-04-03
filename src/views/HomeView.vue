@@ -1,12 +1,14 @@
 <template>
-  <div class="home">This is Home</div>
+  <HeroSection />
 </template>
 
 <script>
 // @ is an alias to /src
-
+import HeroSection from "../components/HeroSection.vue";
 export default {
   name: "HomeView",
-  components: {},
+  components: {
+    HeroSection,
+  },
 };
 </script>
