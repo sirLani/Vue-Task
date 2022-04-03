@@ -1,7 +1,7 @@
 <template>
   <div class="container help-section-bg">
     <div class="inner-container help-section-content">
-      <h2>How can we help you?</h2>
+      <h1>How can we help you?</h1>
       <h5>
         Let us know who you are and what you're looking for, and we'll help get
         you to the right place.
@@ -51,7 +51,7 @@ export default {
     align-items: center;
     background: #fff;
     justify-content: center;
-    margin: 2rem 0;
+    margin: 2rem 0 3rem 0;
     padding: 1.5rem 0;
   }
 }
