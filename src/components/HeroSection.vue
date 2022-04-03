@@ -1,45 +1,48 @@
 <template>
-  <div class="container">
-    <div class="top-section">
-      <div class="inner-container">
-        <div class="header-container">
-          <div class="header-text-caption">
-            <h1>Get online week 2021</h1>
+  <section id="hero">
+    <div class="container">
+      <div class="top-section">
+        <div class="inner-container">
+          <div class="header-container">
+            <div class="header-text-caption">
+              <h1>Get online week 2021</h1>
+            </div>
+            <div class="header-sub-topic">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Laboriosam a in mollitia quae sapiente assumenda perspiciatis
+              </p>
+            </div>
+            <CurvedButton
+              text="Get involved now!"
+              color="rgb(170, 35, 35)"
+              backgroundColor="white"
+            />
           </div>
-          <div class="header-sub-topic">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Laboriosam a in mollitia quae sapiente assumenda perspiciatis
-            </p>
-          </div>
+        </div>
+      </div>
+      <div class="bottom-section">
+        <div class="col col-img"></div>
+        <div class="col">
+          <h2>
+            We are a social change charity helping people to improve their lives
+            through digital.
+          </h2>
+          <p>
+            We tackle the most pressing issues of our time, working with
+            partners in thousands of communities across the UK and further
+            afield
+          </p>
           <CurvedButton
-            text="Get involved now!"
-            color="rgb(170, 35, 35)"
-            backgroundColor="white"
+            text="Learn more about us"
+            color="white"
+            backgroundColor="transparent"
+            border="2px solid white"
           />
         </div>
       </div>
     </div>
-    <div class="bottom-section">
-      <div class="col col-img"></div>
-      <div class="col">
-        <h2>
-          We are a social change charity helping people to improve their lives
-          through digital.
-        </h2>
-        <p>
-          We tackle the most pressing issues of our time, working with partners
-          in thousands of communities across the UK and further afield
-        </p>
-        <CurvedButton
-          text="Learn more about us"
-          color="white"
-          backgroundColor="transparent"
-          border="2px solid white"
-        />
-      </div>
-    </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -129,6 +132,40 @@ export default {
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+}
+
+@media (max-width: 1050px) {
+  .bottom-section {
+    .col {
+      h2 {
+        font-size: 22px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .bottom-section {
+    flex-direction: column;
+    height: auto;
+
+    .col-img {
+      height: 23rem;
+      order: 1;
+    }
+    .col {
+      width: 100%;
+
+      h2 {
+        font-size: 22px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
   }
 }
 </style>

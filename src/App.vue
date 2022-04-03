@@ -19,8 +19,16 @@
         </div>
       </div>
       <div class="bottom-header">
+        <div
+          class="drawer-background"
+          :class="{ show: active.drawer }"
+          @click="closeDrawer()"
+        />
         <Logo />
-        <nav>
+        <i class="fa-solid fa-bars" @click="openDrawer()"></i>
+        <nav :class="{ show: active.drawer }">
+          <div class="drawer-close" @click="closeDrawer()">x</div>
+
           <router-link to="/">Home</router-link>
           <router-link to="/about">What we do</router-link>
           <router-link to="/digital-divide">The digital divide</router-link>
@@ -38,6 +46,23 @@
 <script>
 import Logo from "./components/Logo.vue";
 export default {
+  data() {
+    return {
+      active: {
+        drawer: false,
+      },
+    };
+  },
+
+  methods: {
+    openDrawer() {
+      this.active.drawer = true;
+    },
+
+    closeDrawer() {
+      this.active.drawer = false;
+    },
+  },
   components: {
     Logo,
   },
@@ -102,12 +127,15 @@ nav {
     margin: 0 auto;
     padding: 10px 0 15px 0;
   }
+
   .donate {
     color: white;
     background: rgb(170, 35, 35);
+    border-left: 0px;
   }
   .learn {
     border-bottom: 2px solid rgb(58, 90, 6);
+    border-right: 0px !important;
   }
 
   .top-header-btn {
@@ -126,6 +154,10 @@ nav {
   }
 }
 
+.fa-bars {
+  display: none;
+}
+
 .top-header {
   border-bottom: 1px solid rgb(212, 210, 210);
 
@@ -141,5 +173,85 @@ nav {
 .inner-container {
   width: 90%;
   margin: 0 auto;
+}
+
+.drawer-background {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(124, 124, 124, 0.55);
+  z-index: 100;
+  display: none;
+  transition: display 0.5s;
+
+  &.show {
+    display: block;
+  }
+}
+.drawer-close {
+  font-size: 1.5rem;
+  padding: 5px;
+  border-radius: 5px;
+  right: 10px;
+  border: 2px solid grey;
+  color: grey;
+  width: 80px;
+  float: right;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-self: end;
+
+  &:hover {
+    background-color: lightgrey;
+  }
+}
+@media (max-width: 1010px) {
+  nav {
+    width: 95vw;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: -105vw;
+    padding: 15px;
+    transition: left 0.5s;
+    z-index: 101;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+
+    &.show {
+      left: 0;
+    }
+
+    a {
+      font-weight: bold;
+      color: #2c3e50;
+      text-decoration: none;
+      margin: 0 8px 0 8px;
+      margin-bottom: 1rem;
+      font-size: 20px;
+      padding: 15px;
+
+      &.router-link-exact-active {
+        color: #fff;
+        background-color: #316983;
+      }
+    }
+  }
+
+  .drawer-close {
+    display: flex;
+    margin-right: 7px;
+    margin-bottom: 2rem;
+  }
+
+  .fa-bars {
+    display: block;
+    font-size: 33px;
+  }
 }
 </style>

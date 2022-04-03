@@ -1,21 +1,23 @@
 <template>
-  <div class="container help-section-bg">
-    <div class="inner-container help-section-content">
-      <h1>How can we help you?</h1>
-      <h5>
-        Let us know who you are and what you're looking for, and we'll help get
-        you to the right place.
-      </h5>
-      <div class="form">
-        <p>I am an individual and i want to learn</p>
-        <CurvedButton
-          text="Get involved now!"
-          color="white"
-          backgroundColor="rgb(170, 35, 35)"
-        />
+  <section id="page-section-2">
+    <div class="container help-section-bg">
+      <div class="inner-container help-section-content">
+        <h1>How can we help you?</h1>
+        <h5>
+          Let us know who you are and what you're looking for, and we'll help
+          get you to the right place.
+        </h5>
+        <div class="form">
+          <p>I am an individual and i want to learn</p>
+          <CurvedButton
+            text="Get involved now!"
+            color="white"
+            backgroundColor="rgb(170, 35, 35)"
+          />
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

@@ -1,41 +1,43 @@
 <template>
-  <div class="container footer-section">
-    <div class="inner-container">
-      <div class="footer-content">
-        <h1>What do we do?</h1>
+  <section id="page-section-3">
+    <div class="container footer-section">
+      <div class="inner-container">
+        <div class="footer-content">
+          <h1>What do we do?</h1>
 
-        <p>
-          You might not have heard of us, but we're the people behind the
-          following impacted programmes.
-        </p>
-        <div class="programme-container">
-          <ProgrammeCard
-            title="Get online week"
-            text="Lorem ipsum dolor amet"
-          />
-          <ProgrammeCard
-            title="Get online week"
-            text="Lorem ipsum dolor amet"
-          />
-          <ProgrammeCard
-            title="Get online week"
-            text="Lorem ipsum dolor amet"
-          />
-          <ProgrammeCard
-            title="Get online week"
-            text="Lorem ipsum dolor amet"
-          />
-        </div>
-        <div class="button-container">
-          <CurvedButton
-            text="More about what we do"
-            color="rgb(170, 35, 35)"
-            backgroundColor="white"
-          />
+          <p>
+            You might not have heard of us, but we're the people behind the
+            following impacted programmes.
+          </p>
+          <div class="programme-container">
+            <ProgrammeCard
+              title="Get online week"
+              text="Lorem ipsum dolor amet"
+            />
+            <ProgrammeCard
+              title="Get online week"
+              text="Lorem ipsum dolor amet"
+            />
+            <ProgrammeCard
+              title="Get online week"
+              text="Lorem ipsum dolor amet"
+            />
+            <ProgrammeCard
+              title="Get online week"
+              text="Lorem ipsum dolor amet"
+            />
+          </div>
+          <div class="button-container">
+            <CurvedButton
+              text="More about what we do"
+              color="rgb(170, 35, 35)"
+              backgroundColor="white"
+            />
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -73,6 +75,12 @@ export default {
     justify-content: center;
     align-items: center;
     margin-top: 2.5rem;
+  }
+
+  @media (max-width: 1190px) {
+    .programme-container {
+      flex-wrap: wrap;
+    }
   }
 }
 </style>
