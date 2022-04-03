@@ -79,7 +79,17 @@ export default {
 
   @media (max-width: 1190px) {
     .programme-container {
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-auto-rows: minmax(150px, auto);
+      margin-right: 1rem;
+      grid-row-gap: 20px;
+      grid-column-gap: 20px;
+    }
+  }
+  @media (max-width: 650px) {
+    .programme-container {
+      grid-template-columns: auto;
     }
   }
 }

@@ -41,4 +41,10 @@ export default {
     margin-right: 0px;
   }
 }
+
+@media (max-width: 1190px) {
+  .card {
+    width: 100%;
+  }
+}
 </style>
