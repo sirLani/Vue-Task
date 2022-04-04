@@ -21,14 +21,13 @@
                 <option :key="item" v-for="item in suffixes">{{ item }}</option>
               </select>
             </div>
+            <CurvedButton
+              text="Start now"
+              color="white"
+              backgroundColor="rgb(170, 35, 35)"
+              @click="submitForm()"
+            />
           </div>
-
-          <CurvedButton
-            text="Start now"
-            color="white"
-            backgroundColor="rgb(170, 35, 35)"
-            @click="submitForm()"
-          />
         </div>
       </div>
     </div>
