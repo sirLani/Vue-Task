@@ -39,7 +39,6 @@
       </div>
     </div>
   </header>
-
   <router-view />
 </template>
 
@@ -178,6 +177,7 @@ nav {
 .inner-container {
   width: 90%;
   margin: 0 auto;
+  max-width: 1318px;
 }
 
 .drawer-background {

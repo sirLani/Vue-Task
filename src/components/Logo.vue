@@ -34,5 +34,14 @@ export default {
     justify-content: flex-start;
     align-items: flex-start;
   }
+
+  @media (max-width: 450px) {
+    h1 {
+      font-size: 25px;
+    }
+    h4 {
+      margin-top: -10px;
+    }
+  }
 }
 </style>

@@ -1,10 +1,9 @@
 <template>
   <section id="page-section-3">
-    <div class="container footer-section">
+    <div class="footer-section">
       <div class="inner-container">
         <div class="footer-content">
           <h1>What do we do?</h1>
-
           <p>
             You might not have heard of us, but we're the people behind the
             following impacted programmes.

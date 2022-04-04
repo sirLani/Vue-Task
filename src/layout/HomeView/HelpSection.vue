@@ -1,6 +1,6 @@
 <template>
   <section id="page-section-2">
-    <div class="container help-section-bg">
+    <div class="help-section-bg">
       <div class="help-section-content">
         <div class="inner-container">
           <h1>How can we help you?</h1>

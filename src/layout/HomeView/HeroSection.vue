@@ -1,6 +1,6 @@
 <template>
   <section id="hero">
-    <div class="container">
+    <div class="">
       <div class="top-section">
         <div class="inner-container">
           <div class="header-container">
@@ -23,25 +23,27 @@
           </div>
         </div>
       </div>
-      <div class="bottom-section">
-        <div class="col col-img"></div>
-        <div class="col">
-          <h2>
-            We are a social change charity, helping people to improve their
-            lives through digital.
-          </h2>
-          <p>
-            We tackle the most pressing issues of our time, working with
-            partners in thousands of communities across the UK and further
-            afield
-          </p>
-          <CurvedButton
-            @click="learnMore()"
-            text="Learn more about us"
-            color="white"
-            backgroundColor="transparent"
-            border="2px solid white"
-          />
+      <div class="container">
+        <div class="bottom-section">
+          <div class="col col-img"></div>
+          <div class="col">
+            <h2>
+              We are a social change charity, helping people to improve their
+              lives through digital.
+            </h2>
+            <p>
+              We tackle the most pressing issues of our time, working with
+              partners in thousands of communities across the UK and further
+              afield
+            </p>
+            <CurvedButton
+              @click="learnMore()"
+              text="Learn more about us"
+              color="white"
+              backgroundColor="transparent"
+              border="2px solid white"
+            />
+          </div>
         </div>
       </div>
     </div>
