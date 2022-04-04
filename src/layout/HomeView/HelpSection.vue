@@ -4,10 +4,10 @@
       <div class="help-section-content">
         <div class="inner-container">
           <h1>How can we help you?</h1>
-          <h5>
+          <h4>
             Let us know who you are and what you're looking for, and we'll help
             get you to the right place.
-          </h5>
+          </h4>
         </div>
         <div class="inner-container form-container">
           <div class="form">
