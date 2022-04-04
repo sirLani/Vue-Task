@@ -13,10 +13,12 @@
                 Laboriosam a in mollitia quae sapiente assumenda perspiciatis
               </p>
             </div>
+
             <CurvedButton
               text="Get involved now!"
               color="rgb(170, 35, 35)"
               backgroundColor="white"
+              @click="getInvolved()"
             />
           </div>
         </div>
@@ -25,8 +27,8 @@
         <div class="col col-img"></div>
         <div class="col">
           <h2>
-            We are a social change charity helping people to improve their lives
-            through digital.
+            We are a social change charity, helping people to improve their
+            lives through digital.
           </h2>
           <p>
             We tackle the most pressing issues of our time, working with
@@ -34,6 +36,7 @@
             afield
           </p>
           <CurvedButton
+            @click="learnMore()"
             text="Learn more about us"
             color="white"
             backgroundColor="transparent"
@@ -46,10 +49,19 @@
 </template>
 
 <script>
-import CurvedButton from "../components/CurvedButton.vue";
+import CurvedButton from "../../components/CurvedButton.vue";
+import router from "@/router";
 export default {
   components: {
     CurvedButton,
+  },
+  methods: {
+    getInvolved() {
+      router.push({ name: "get-involved" });
+    },
+    learnMore() {
+      router.push({ name: "about" });
+    },
   },
 };
 </script>
@@ -62,7 +74,7 @@ export default {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url("../assets/pic-one.jpg");
+    url("../../assets/pic-one.jpg");
   background-color: #cccccc;
   background-position: right;
   background-repeat: no-repeat;
@@ -80,7 +92,16 @@ export default {
     .header-text-caption {
       background-color: #497c8f;
       font-size: 28px;
-      padding: 12px 10px;
+      padding: 12px 14px;
+      h1 {
+        font-size: 72px;
+      }
+
+      @media (max-width: 1050px) {
+        h1 {
+          font-size: 50px;
+        }
+      }
     }
     .header-sub-topic {
       display: flex;
@@ -88,7 +109,7 @@ export default {
       justify-content: flex-start;
       color: #478175;
       font-weight: 600;
-      max-width: 410px;
+      max-width: 480px;
       padding: 10px;
       margin-top: 15px;
       margin-bottom: 15px;
@@ -127,7 +148,7 @@ export default {
     }
   }
   .col-img {
-    background-image: url("../assets/pic-two.jpg");
+    background-image: url("../../assets/pic-two.jpg");
     background-color: #cccccc;
     background-position: right;
     background-repeat: no-repeat;

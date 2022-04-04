@@ -6,9 +6,9 @@
 
 <script>
 // @ is an alias to /src
-import HeroSection from "../components/HeroSection.vue";
-import HelpSection from "../components/HelpSection.vue";
-import FooterSection from "../components/FooterSection.vue";
+import HeroSection from "../layout/HomeView/HeroSection.vue";
+import HelpSection from "../layout/HomeView/HelpSection.vue";
+import FooterSection from "../layout/HomeView/FooterSection.vue";
 export default {
   name: "HomeView",
   components: {

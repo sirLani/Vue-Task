@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import PageNotFoundView from "../views/PageNotFoundView.vue";
 
 const routes = [
   {
@@ -46,6 +47,12 @@ const routes = [
 
     component: () =>
       import(/* webpackChunkName: "insights" */ "../views/InsightsView.vue"),
+  },
+
+  {
+    path: "/:catchAll(.*)*",
+    name: "PageNotFound",
+    component: PageNotFoundView,
   },
 ];
 

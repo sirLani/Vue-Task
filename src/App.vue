@@ -54,6 +54,11 @@ export default {
     };
   },
 
+  // this initiates the getLocalStorage function on page load
+  mounted() {
+    this.$store.commit("updateOptionFromStorage");
+  },
+
   methods: {
     openDrawer() {
       this.active.drawer = true;
@@ -253,5 +258,9 @@ nav {
     display: block;
     font-size: 33px;
   }
+}
+.align {
+  text-align: left;
+  margin-top: 2rem;
 }
 </style>

@@ -11,20 +11,10 @@
           </p>
           <div class="programme-container">
             <ProgrammeCard
-              title="Get online week"
-              text="Lorem ipsum dolor amet"
-            />
-            <ProgrammeCard
-              title="Get online week"
-              text="Lorem ipsum dolor amet"
-            />
-            <ProgrammeCard
-              title="Get online week"
-              text="Lorem ipsum dolor amet"
-            />
-            <ProgrammeCard
-              title="Get online week"
-              text="Lorem ipsum dolor amet"
+              :key="item.id"
+              v-for="item in items"
+              :title="item.title"
+              :text="item.description"
             />
           </div>
           <div class="button-container">
@@ -41,10 +31,37 @@
 </template>
 
 <script>
-import CurvedButton from "../components/CurvedButton.vue";
-import ProgrammeCard from "../components/ProgrammeCard";
+import CurvedButton from "../../components/CurvedButton.vue";
+import ProgrammeCard from "../../components/ProgrammeCard";
 export default {
   components: { CurvedButton, ProgrammeCard },
+
+  data() {
+    return {
+      items: [
+        {
+          id: 1,
+          title: "Get online week",
+          description: "Lorem ipsum dolor sit amet",
+        },
+        {
+          id: 2,
+          title: "Learn my way",
+          description: "Lorem ipsum dolor sit amet",
+        },
+        {
+          id: 3,
+          title: "Make it click",
+          description: "Lorem ipsum dolor sit amet",
+        },
+        {
+          id: 4,
+          title: "Digital week",
+          description: "Lorem ipsum dolor sit amet",
+        },
+      ],
+    };
+  },
 };
 </script>
 
