@@ -39,7 +39,7 @@ export default createStore({
       const prefix = localStorage.getItem("prefix");
       const suffix = localStorage.getItem("suffix");
 
-      if (prefix || prefix) {
+      if (prefix || suffix) {
         state.prefix = JSON.parse(prefix);
         state.suffix = JSON.parse(suffix);
       }
