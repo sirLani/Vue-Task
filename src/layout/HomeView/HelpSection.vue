@@ -16,7 +16,7 @@
               <select class="form-control" value="Prefix" v-model="form.prefix">
                 <option :key="item" v-for="item in prefixes">{{ item }}</option>
               </select>
-              <p>and i want</p>
+              <p>and i</p>
               <select class="form-control" v-model="form.suffix">
                 <option :key="item" v-for="item in suffixes">{{ item }}</option>
               </select>
