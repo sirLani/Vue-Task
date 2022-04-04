@@ -187,6 +187,11 @@ export default {
         font-size: 16px;
       }
     }
+    @media (max-width: 430px) {
+      .col {
+        padding-left: 30px;
+      }
+    }
   }
 }
 </style>

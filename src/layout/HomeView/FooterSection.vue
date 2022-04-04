@@ -108,6 +108,10 @@ export default {
     .programme-container {
       grid-template-columns: auto;
     }
+    h1 {
+      display: flex;
+      align-self: center;
+    }
   }
 }
 </style>
