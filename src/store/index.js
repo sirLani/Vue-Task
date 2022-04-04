@@ -4,6 +4,14 @@ const updateLocalStorage = (type, item) => {
   localStorage.setItem(type, JSON.stringify(item));
 };
 
+const getFromLocalStorage = (type) => {
+  return localStorage.getItem(type);
+};
+
+const fromJson = (task) => {
+  return JSON.parse(task);
+};
+
 export default createStore({
   state: {
     prefix: "",
@@ -28,20 +36,20 @@ export default createStore({
     },
     addSuffixToStorage(state, item) {
       if (item) {
-        state.prefix = item;
+        state.suffix = item;
       } else {
         throw new Error("the form has to filled");
       }
-      updateLocalStorage("suffix", state.prefix);
+      updateLocalStorage("suffix", state.suffix);
     },
 
     updateOptionFromStorage(state) {
-      const prefix = localStorage.getItem("prefix");
-      const suffix = localStorage.getItem("suffix");
+      const prefix = getFromLocalStorage("prefix");
+      const suffix = getFromLocalStorage("suffix");
 
       if (prefix || suffix) {
-        state.prefix = JSON.parse(prefix);
-        state.suffix = JSON.parse(suffix);
+        state.prefix = fromJson(prefix);
+        state.suffix = fromJson(suffix);
       }
     },
   },
