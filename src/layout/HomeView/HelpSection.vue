@@ -1,22 +1,26 @@
 <template>
   <section id="page-section-2">
     <div class="container help-section-bg">
-      <div class="inner-container help-section-content">
-        <h1>How can we help you?</h1>
-        <h5>
-          Let us know who you are and what you're looking for, and we'll help
-          get you to the right place.
-        </h5>
-        <div class="form">
-          <div class="form-group">
-            <p>I am</p>
-            <select class="form-control" value="Prefix" v-model="form.prefix">
-              <option :key="item" v-for="item in prefixes">{{ item }}</option>
-            </select>
-            <p>and i want</p>
-            <select class="form-control" v-model="form.suffix">
-              <option :key="item" v-for="item in suffixes">{{ item }}</option>
-            </select>
+      <div class="help-section-content">
+        <div class="inner-container">
+          <h1>How can we help you?</h1>
+          <h5>
+            Let us know who you are and what you're looking for, and we'll help
+            get you to the right place.
+          </h5>
+        </div>
+        <div class="inner-container form-container">
+          <div class="form">
+            <div class="form-group">
+              <p>I am</p>
+              <select class="form-control" value="Prefix" v-model="form.prefix">
+                <option :key="item" v-for="item in prefixes">{{ item }}</option>
+              </select>
+              <p>and i want</p>
+              <select class="form-control" v-model="form.suffix">
+                <option :key="item" v-for="item in suffixes">{{ item }}</option>
+              </select>
+            </div>
           </div>
 
           <CurvedButton
@@ -135,6 +139,11 @@ export default {
   @media (max-width: 414px) {
     select {
       font-size: 13px !important;
+    }
+  }
+  @media (max-width: 381px) {
+    .inner-container.form-container {
+      width: 100% !important;
     }
   }
 }
