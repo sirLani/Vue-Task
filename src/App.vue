@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <header class="container">
     <div class="header">
       <div class="top-header">
         <div class="inner-container">
@@ -38,7 +38,7 @@
         </nav>
       </div>
     </div>
-  </div>
+  </header>
 
   <router-view />
 </template>
